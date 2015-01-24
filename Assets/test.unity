@@ -284,8 +284,9 @@ Animation:
   m_GameObject: {fileID: 474974918}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 667b0bcd3c0838646a1e36f4f18c03c0, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 667b0bcd3c0838646a1e36f4f18c03c0, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -306,7 +307,7 @@ Renderer:
   - {fileID: 2100000, guid: 8324d146ef262d74587728cf301b9144, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
+  m_UseLightProbes: 1
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
@@ -490,6 +491,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11100000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -533,6 +538,22 @@ Prefab:
     - target: {fileID: 400000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
       propertyPath: m_LocalScale.z
       value: .0250000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 667b0bcd3c0838646a1e36f4f18c03c0, type: 2}
+    - target: {fileID: 11100000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 667b0bcd3c0838646a1e36f4f18c03c0, type: 2}
+    - target: {fileID: 2300000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2481684425dd9d49817ca64606901dd, type: 2}
