@@ -63,24 +63,22 @@ namespace UnitySampleAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
-            // the jump state needs to read here to make sure it is not missed
-            if (!_jump)
-                _jump = CrossPlatformInputManager.GetButtonDown("Jump");
+			RotateView ();
+			// the jump state needs to read here to make sure it is not missed
+			if (!_jump)
+					_jump = CrossPlatformInputManager.GetButtonDown ("Jump");
 
-            if (!_previouslyGrounded && _characterController.isGrounded)
-            {
-                StartCoroutine(_jumpBob.DoBobCycle());
-                PlayLandingSound();
-                _moveDir.y = 0f;
-                _jumping = false;
-            }
-            if (!_characterController.isGrounded && !_jumping && _previouslyGrounded)
-            {
-                _moveDir.y = 0f;
-            }
+			if (!_previouslyGrounded && _characterController.isGrounded) {
+					StartCoroutine (_jumpBob.DoBobCycle ());
+					PlayLandingSound ();
+					_moveDir.y = 0f;
+					_jumping = false;
+			}
+			if (!_characterController.isGrounded && !_jumping && _previouslyGrounded) {
+					_moveDir.y = 0f;
+			}
 
-            _previouslyGrounded = _characterController.isGrounded;
+			_previouslyGrounded = _characterController.isGrounded;
         }
 
         private void PlayLandingSound()

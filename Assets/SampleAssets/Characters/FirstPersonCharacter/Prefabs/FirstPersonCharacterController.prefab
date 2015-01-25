@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   - 82: {fileID: 8200000}
+  - 148: {fileID: 14851320}
   m_Layer: 0
   m_Name: FirstPersonCharacterController
   m_TagString: Untagged
@@ -29,6 +30,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 20: {fileID: 2000000}
   - 81: {fileID: 8100000}
+  - 33: {fileID: 3348148}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -93,6 +95,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!33 &3348148
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Mesh: {fileID: 4300002, guid: b235179bd2a63d1468dd430670338c55, type: 3}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -198,6 +207,8 @@ MonoBehaviour:
     MaximumX: 360
     MinimumY: -90
     MaximumY: 90
+    smooth: 0
+    smoothtime: 0
   useFOVKick: 1
   _fovKick:
     Camera: {fileID: 0}
@@ -280,6 +291,18 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!148 &14851320
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 400000}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
